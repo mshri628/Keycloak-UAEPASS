@@ -1,0 +1,523 @@
+{
+	"info": {
+		"_postman_id": "39696643-48d0-45e6-8501-29a4c54fa12c",
+		"name": "DEMO KEYCLOAK WITH UAE PASS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8134979"
+	},
+	"item": [
+		{
+			"name": "STEP 4 KC USER INFO",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "your_access_token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJKZ0JWSW84SXZHZ0F3RTNLaFBmTVVIRjFnYTAtZ1h0NlBvYl96Ul9TNHNvIn0.eyJleHAiOjE3Mzg1MjI5MTksImlhdCI6MTczODUyMjYxOSwiYXV0aF90aW1lIjoxNzM4NTIyNTg2LCJqdGkiOiI5NWExYTE2NC1mZGNkLTRjOWMtOTYyZS02NGRkNzVhOWNhNTciLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvcmVhbG1zL3VhZXBhc3MtcmVhbG0iLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiMzViNzJmMWMtNzQ0MC00NWQyLTg0OGEtOTY4ODBiYTE0YjliIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoibXktdGVzdC1hcHAiLCJzaWQiOiI3YWM5Y2NlYi00MWI3LTQyNGEtOTE5ZC1kNWZkYmQyZmJjYmMiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXVhZXBhc3MtcmVhbG0iLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsImlkbiI6Ijc4NDE5NzEwODA5NzUxNiIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6Ik1vaGl0IFNocml2YXN0YXZhIiwibW9iaWxlIjoiOTcxNTg1MjEyNDM5IiwicHJlZmVycmVkX3VzZXJuYW1lIjoic2hyaXZhc3RhdmFtb2hpdDYyOEBnbWFpbC5jb20iLCJnaXZlbl9uYW1lIjoiTW9oaXQiLCJmYW1pbHlfbmFtZSI6IlNocml2YXN0YXZhIiwiZW1haWwiOiJzaHJpdmFzdGF2YW1vaGl0NjI4QGdtYWlsLmNvbSJ9.spqC0GxcjUqq-b_cRrLr09-_Yxg5VE1NpXFeFTYlJ2591fLLa0hTO0s7tOvTdijOmEyJX1Tt3-0VA8cQPOtHNt9GOXltziw8UGefAf3iEKG7ZSlZ2T7qjMtnRSy_USztlqDxrCh_ryyYL4bKEHCwJTFGp1eFssCi3vbbkyVFv6Rx5wWFFnS2PNna6hGjzbXZ1vPF7URWL-v_xjULhaWNmjsbzkAk0xwmQy3yMzs8as3qU6fWVHn-oWyapnYwUpPvbHXhy8hMJnrIdBb-os315BMmzRMeUFKc1dkJSVJTljzWwhSa54PNM7uaAL7TFF1jZWCQRt66cP3hd7TCVfdzoQ"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/realms/uae-pass-demo/protocol/openid-connect/userinfo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"realms",
+						"uae-pass-demo",
+						"protocol",
+						"openid-connect",
+						"userinfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "KC PUBLIC KEY",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJKZ0JWSW84SXZHZ0F3RTNLaFBmTVVIRjFnYTAtZ1h0NlBvYl96Ul9TNHNvIn0.eyJleHAiOjE3Mzg1MjI5MTksImlhdCI6MTczODUyMjYxOSwiYXV0aF90aW1lIjoxNzM4NTIyNTg2LCJqdGkiOiI5NWExYTE2NC1mZGNkLTRjOWMtOTYyZS02NGRkNzVhOWNhNTciLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvcmVhbG1zL3VhZXBhc3MtcmVhbG0iLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiMzViNzJmMWMtNzQ0MC00NWQyLTg0OGEtOTY4ODBiYTE0YjliIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoibXktdGVzdC1hcHAiLCJzaWQiOiI3YWM5Y2NlYi00MWI3LTQyNGEtOTE5ZC1kNWZkYmQyZmJjYmMiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXVhZXBhc3MtcmVhbG0iLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsImlkbiI6Ijc4NDE5NzEwODA5NzUxNiIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6Ik1vaGl0IFNocml2YXN0YXZhIiwibW9iaWxlIjoiOTcxNTg1MjEyNDM5IiwicHJlZmVycmVkX3VzZXJuYW1lIjoic2hyaXZhc3RhdmFtb2hpdDYyOEBnbWFpbC5jb20iLCJnaXZlbl9uYW1lIjoiTW9oaXQiLCJmYW1pbHlfbmFtZSI6IlNocml2YXN0YXZhIiwiZW1haWwiOiJzaHJpdmFzdGF2YW1vaGl0NjI4QGdtYWlsLmNvbSJ9.spqC0GxcjUqq-b_cRrLr09-_Yxg5VE1NpXFeFTYlJ2591fLLa0hTO0s7tOvTdijOmEyJX1Tt3-0VA8cQPOtHNt9GOXltziw8UGefAf3iEKG7ZSlZ2T7qjMtnRSy_USztlqDxrCh_ryyYL4bKEHCwJTFGp1eFssCi3vbbkyVFv6Rx5wWFFnS2PNna6hGjzbXZ1vPF7URWL-v_xjULhaWNmjsbzkAk0xwmQy3yMzs8as3qU6fWVHn-oWyapnYwUpPvbHXhy8hMJnrIdBb-os315BMmzRMeUFKc1dkJSVJTljzWwhSa54PNM7uaAL7TFF1jZWCQRt66cP3hd7TCVfdzoQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJKZ0JWSW84SXZHZ0F3RTNLaFBmTVVIRjFnYTAtZ1h0NlBvYl96Ul9TNHNvIn0.eyJleHAiOjE3Mzg1MjI5MTksImlhdCI6MTczODUyMjYxOSwiYXV0aF90aW1lIjoxNzM4NTIyNTg2LCJqdGkiOiI5NWExYTE2NC1mZGNkLTRjOWMtOTYyZS02NGRkNzVhOWNhNTciLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvcmVhbG1zL3VhZXBhc3MtcmVhbG0iLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiMzViNzJmMWMtNzQ0MC00NWQyLTg0OGEtOTY4ODBiYTE0YjliIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoibXktdGVzdC1hcHAiLCJzaWQiOiI3YWM5Y2NlYi00MWI3LTQyNGEtOTE5ZC1kNWZkYmQyZmJjYmMiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLXVhZXBhc3MtcmVhbG0iLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsImlkbiI6Ijc4NDE5NzEwODA5NzUxNiIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6Ik1vaGl0IFNocml2YXN0YXZhIiwibW9iaWxlIjoiOTcxNTg1MjEyNDM5IiwicHJlZmVycmVkX3VzZXJuYW1lIjoic2hyaXZhc3RhdmFtb2hpdDYyOEBnbWFpbC5jb20iLCJnaXZlbl9uYW1lIjoiTW9oaXQiLCJmYW1pbHlfbmFtZSI6IlNocml2YXN0YXZhIiwiZW1haWwiOiJzaHJpdmFzdGF2YW1vaGl0NjI4QGdtYWlsLmNvbSJ9.spqC0GxcjUqq-b_cRrLr09-_Yxg5VE1NpXFeFTYlJ2591fLLa0hTO0s7tOvTdijOmEyJX1Tt3-0VA8cQPOtHNt9GOXltziw8UGefAf3iEKG7ZSlZ2T7qjMtnRSy_USztlqDxrCh_ryyYL4bKEHCwJTFGp1eFssCi3vbbkyVFv6Rx5wWFFnS2PNna6hGjzbXZ1vPF7URWL-v_xjULhaWNmjsbzkAk0xwmQy3yMzs8as3qU6fWVHn-oWyapnYwUpPvbHXhy8hMJnrIdBb-os315BMmzRMeUFKc1dkJSVJTljzWwhSa54PNM7uaAL7TFF1jZWCQRt66cP3hd7TCVfdzoQ"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://localhost:3000/callback",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "code",
+							"value": "b536f799-9d3d-4e52-a245-6a32e76b0d00.7ac9cceb-41b7-424a-919d-d5fdbd2fbcbc.b82d5b70-320a-4cfc-9fe6-be7d6bc3eb64",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "client_id",
+							"value": "my-test-app",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "client_secret",
+							"value": "sandbox_stage",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/realms/uae-pass-demo/protocol/openid-connect/certs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"realms",
+						"uae-pass-demo",
+						"protocol",
+						"openid-connect",
+						"certs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STEP 2 KC TOKEN",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic c2FuZGJveF9zdGFnZTpzYW5kYm94X3N0YWdl"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "text"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://localhost:3000/callback",
+							"type": "text"
+						},
+						{
+							"key": "code",
+							"value": "obtained code from url",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "my-demo-app",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "your client secret",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "openid",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/realms/uae-pass-demo/protocol/openid-connect/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"realms",
+						"uae-pass-demo",
+						"protocol",
+						"openid-connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STEP 5 KC LOGOUT",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic c2FuZGJveF9zdGFnZTpzYW5kYm94X3N0YWdl"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://localhost:3000/callback",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "code",
+							"value": "a3989fc7-e118-4c35-8d6b-d07a21c1880e.d24f99d4-6d74-478a-ab95-a09a1f2c5984.b82d5b70-320a-4cfc-9fe6-be7d6bc3eb64",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "client_id",
+							"value": "my-test-app",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "your_client_secret",
+							"type": "text"
+						},
+						{
+							"key": "refresh_token",
+							"value": "refresh_token from STEP 2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/realms/uaepass-realm/protocol/openid-connect/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"realms",
+						"uaepass-realm",
+						"protocol",
+						"openid-connect",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STEP 3 KC REFRESH TOKEN",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic c2FuZGJveF9zdGFnZTpzYW5kYm94X3N0YWdl"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "refresh_token",
+							"type": "text"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://localhost:3000/callback",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "refresh_token",
+							"value": "refresh_token from step 2",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "my-test-app",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "WMD2us10qZike1JtNSV3vvvisLiTzDkY",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/realms/uaepass-realm/protocol/openid-connect/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"realms",
+						"uaepass-realm",
+						"protocol",
+						"openid-connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STEP1 KC BROWSER",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic c2FuZGJveF9zdGFnZTpzYW5kYm94X3N0YWdl"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://localhost:3000/callback",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "code",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "client_id",
+							"value": "my-test-app",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "client_secret",
+							"value": "sandbox_stage",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/realms/uae-pass-demo/protocol/openid-connect/auth?response_type=code&redirect_uri=http://localhost:3000/callback&state=some-random-state&acr_values=urn:safelayer:tws:policies:authentication:level:low&client_id=my-demo-app",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"realms",
+						"uae-pass-demo",
+						"protocol",
+						"openid-connect",
+						"auth"
+					],
+					"query": [
+						{
+							"key": "response_type",
+							"value": "code"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://localhost:3000/callback"
+						},
+						{
+							"key": "state",
+							"value": "some-random-state"
+						},
+						{
+							"key": "acr_values",
+							"value": "urn:safelayer:tws:policies:authentication:level:low"
+						},
+						{
+							"key": "client_id",
+							"value": "my-demo-app"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADMIN KC  token",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "admin-cli",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "pass",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/realms/master/protocol/openid-connect/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"realms",
+						"master",
+						"protocol",
+						"openid-connect",
+						"token"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST http://localhost:8080/realms/master/protocol/openid-connect/token \\\r\n-H \"Content-Type: application/x-www-form-urlencoded\" \\\r\n-d \"client_id=admin-cli\" \\\r\n-d \"username=admin\" \\\r\n-d \"password=your_admin_password\" \\\r\n-d \"grant_type=password\""
+			},
+			"response": []
+		},
+		{
+			"name": "ADMIN KC GET USER",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "your_admin_token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJwa0xWVi1NcUxPQ3Q4eFhRdXhsUThhQVVXMm02Q085dTNhQktyN1c0M0tFIn0.eyJleHAiOjE3MzYwOTg4MDIsImlhdCI6MTczNjA5ODc0MiwianRpIjoiYzE2YTkzYzItNGE2Zi00ZTkzLTllODItYTRkYTcxNThkY2M3IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9tYXN0ZXIiLCJzdWIiOiJmMmVmZGE0ZC02MDg2LTRjOTMtYTY4OC01ZGE2YzhmOGMxZTkiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhZG1pbi1jbGkiLCJzaWQiOiJkYWVjY2VjYS0wN2I2LTRhZTQtOWNkZC02ZTA2MmQ3OWRmMjUiLCJhY3IiOiIxIiwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJhZG1pbiJ9.AsgSNwu0SmivWIFUa0IFgRj6Mx-Ao1iSWIQ8ZszuMgf8o5TlJUoS0IuG0uEHmJCnXGniRf83QRnQjF3WutGacURvwk_yS5WgYng7f_KFhkZcp9djiYXYDTiwsPdyZp6No3z48XHl5SY13FpUgYF0EiE5WYEzRSUnhBMMUhjTC3G9uB-DFHP0wCuhMlAonc8_C63LhwwWfHGvcC3IPMlI0Qw-hjoL2vzqXqk2PwhRjrm-rfhzxcL1HJPPDnCDCjqxsjqbJJ3LneR2XIoDRTXKBKZkI1HfHnAqh693anwpTcBj7KDKR7d92mx9hriw2EWqKZm0GmgcawVXSy9Hqr7S3Q",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/admin/realms/uaepass-realm/users/$USER_ID",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"realms",
+						"uaepass-realm",
+						"users",
+						"$USER_ID"
+					]
+				},
+				"description": "Generated from cURL: curl -X GET http://localhost:8080/admin/realms/uaepass-realm/users/{user-id} \\\r\n-H \"Authorization: Bearer {admin_token}\""
+			},
+			"response": []
+		}
+	]
+}
